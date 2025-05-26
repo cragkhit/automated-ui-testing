@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.0 on darwin)" generated="2025-05-27T05:49:51.784385" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/chaiyong/Downloads/automated-ui-testing/robottest/test.robot">
+<test id="s1-t1" name="Test opening MDN using Chrome" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-27T05:49:51.849115" level="INFO">Opening browser 'Chrome' to base url 'https://developer.mozilla.org/en-US/'.</msg>
+<msg time="2025-05-27T05:49:51.954576" level="WARN">The chromedriver version (136.0.7103.113) detected in PATH at /Users/chaiyong/Downloads/automated-ui-testing/robottest/chromedriver might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.40 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url_mdn}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-27T05:49:51.848990" elapsed="1.373859"/>
+</kw>
+<status status="PASS" start="2025-05-27T05:49:51.848514" elapsed="1.374778"/>
+</test>
+<test id="s1-t2" name="Get the page title and compare" line="15">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-05-27T05:49:53.226571" level="INFO">${title} = MDN Web Docs</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.224090" elapsed="0.002508"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>MDN Web Docs</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.226729" elapsed="0.000145"/>
+</kw>
+<status status="PASS" start="2025-05-27T05:49:53.223669" elapsed="0.003278"/>
+</test>
+<test id="s1-t3" name="Search using the keyword &quot;WebDriver&quot;" line="19">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-27T05:49:53.227436" level="INFO">Typing text 'WebDriver' into text field 'q'.</msg>
+<arg>q</arg>
+<arg>WebDriver</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.227197" elapsed="0.135402"/>
+</kw>
+<kw name="Submit Form" owner="SeleniumLibrary">
+<msg time="2025-05-27T05:49:53.362828" level="INFO">Submitting form 'None'.</msg>
+<doc>Submits a form identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.362748" elapsed="0.084768"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-05-27T05:49:53.542937" level="INFO">${title} = Search: "WebDriver"</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.447702" elapsed="0.095269"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-27T05:49:53.543239" level="INFO">Page title after search is: Search: "WebDriver" # Logs the title to the console</msg>
+<arg>Page title after search is: ${title} # Logs the title to the console</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.543121" elapsed="0.000145"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-05-27T05:49:53.543496" level="FAIL">Search: "WebDriver" != WebDriver | MDN</msg>
+<arg>${title}</arg>
+<arg>WebDriver | MDN</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-05-27T05:49:53.543339" elapsed="0.000267">Search: "WebDriver" != WebDriver | MDN</status>
+</kw>
+<status status="FAIL" start="2025-05-27T05:49:53.227048" elapsed="0.316670">Search: "WebDriver" != WebDriver | MDN</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-27T05:49:53.544014" elapsed="0.077188"/>
+</kw>
+<status status="FAIL" start="2025-05-27T05:49:51.785238" elapsed="1.836048"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="2" fail="1" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-27T05:49:51.954576" level="WARN">The chromedriver version (136.0.7103.113) detected in PATH at /Users/chaiyong/Downloads/automated-ui-testing/robottest/chromedriver might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.40 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
