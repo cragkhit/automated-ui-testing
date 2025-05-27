@@ -50,7 +50,6 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
       try {
         await driver.get('https://developer.mozilla.org/en-US/');
         await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-        await driver.wait(until.titleIs('WebDriver | MDN'), 1000);
         // Check page title
         const pageTitle = await driver.getTitle();
         await assert.strictEqual(pageTitle, 'WebDriver | MDN');
