@@ -25,7 +25,7 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
     export PATH=$PATH:<Location of the web driver>
     ```
 9.  In VS Code, create a new JavaScript file called `test.js`.
-10.  Start creating the test case by adding the following code.
+10. Start creating the test case by adding the following code.
     ```javascript
     const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
     (async function example() {
@@ -38,8 +38,9 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
       }
     })();
     ```
-11. Try executing the code and see what happens.
-12. Modify the code further to enter the query string into the search box and perform the search.
+    
+12. Try executing the code and see what happens.
+13. Modify the code further to enter the query string into the search box and perform the search.
     ```javascript
     const assert = require("assert");
     const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
