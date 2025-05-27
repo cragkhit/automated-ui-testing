@@ -21,8 +21,11 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
 6.  Then, select the same version of ChromeDriver.
     *(Image showing ChromeDriver versions)*
 7.  Save and extract the file and add it to the system PATH. Note down its location on the machine.
-8.  In VS Code, create a new JavaScript file called `test.js`.
-9.  Start creating the test case by adding the following code.
+    ```bash
+    export PATH=$PATH:<Location of the web driver>
+    ```
+9.  In VS Code, create a new JavaScript file called `test.js`.
+10.  Start creating the test case by adding the following code.
     ```javascript
     const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
 
@@ -36,8 +39,8 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
       }
     })();
     ```
-10. Try executing the code and see what happens.
-11. Modify the code further to enter the query string into the search box and perform the search.
+11. Try executing the code and see what happens.
+12. Modify the code further to enter the query string into the search box and perform the search.
     ```javascript
     const assert = require("assert");
     const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
