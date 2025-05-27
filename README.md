@@ -28,7 +28,6 @@ Selenium WebDriver is an automated testing framework that can be implemented in 
 10.  Start creating the test case by adding the following code.
     ```javascript
     const { Builder, Browser, By, Key, until } = require('selenium-webdriver');
-
     (async function example() {
       let driver = await new Builder().forBrowser(Browser.CHROME).build();
       try {
